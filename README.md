@@ -37,8 +37,10 @@ secret_number = get_random_number()
 while True:
   temporary_number = get_random_number()
   hint = secret_number + temporary_number
+
   print(f'Hint: {hint}')
   guess = int(input("Enter guess: "))
+
   if guess == secret_number:
     print("Congrats! You guessed the secret number {secret_number} in only {} seconds!")
     break
