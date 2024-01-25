@@ -1,6 +1,6 @@
 import random
 
-LIMIT = 10**7
+LIMIT = 10**9
 
 get_random_number = lambda limit=LIMIT: random.randint(-limit, limit)
 
@@ -62,4 +62,4 @@ def test_limit(game=game1, limit=LIMIT):
     num_guesses = game(limit=limit)
     print(f'It took {num_guesses} guesses with limit {limit}, the ratio is {num_guesses/float(limit)}')
 
-test_limit(game=game2, limit=10**9)
+test_limit(game=game2, limit=LIMIT)
