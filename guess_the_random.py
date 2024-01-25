@@ -2,38 +2,43 @@ import random
 
 LIMIT = 10**7
 
-generate_random_number = lambda limit=LIMIT: random.randint(-limit, limit)
+get_random_number = lambda limit=LIMIT: random.randint(-limit, limit)
 
+def generate_random_numbers(limit=LIMIT):
+    while True:
+        yield get_random_number(limit=limit)
 
-def mean(values):
+def generate_hints(secret_number, limit=LIMIT):
+    random_numbers = generate_random_numbers(limit=limit)
+    
+    for temporary_number in random_numbers:
+        hint = secret_number + temporary_number
+        yield hint
+
+def iter_means(values):
     curr_mean = 0.0
 
     for i, value in enumerate(values):
 
         curr_mean += (value - curr_mean) / (i+1)
         yield curr_mean
-
-def generate_random_numbers(limit=LIMIT):
-    while True:
-        yield generate_random_number(limit=limit)
-
-def generate_hints(secret_number, limit=LIMIT):
-    for random_number in generate_random_numbers(limit=limit):
-        hint = secret_number + random_number
-        yield hint
-
+        
 def game1(limit=LIMIT):
-    secret_number = generate_random_number(limit=limit)
+    ''' Simulate "Guess The Random" and return the number of turns the game lasted '''
+    
+    secret_number = get_random_number(limit=limit)
     hints = generate_hints(secret_number, limit=limit)
-    mean_values = mean(hints)
+    mean_values = iter_means(hints)
 
     for i, guess in enumerate(mean_values):
         if int(guess) == secret_number:
             return i
 
 def game2(limit=LIMIT):
+    ''' Same as game1() but with logging '''
+    
     L = limit
-    secret_number = generate_random_number(limit=limit)
+    secret_number = get_random_number(limit=limit)
     secret_number = 0
     hints = generate_hints(secret_number, limit=limit)
 
@@ -55,6 +60,6 @@ def game2(limit=LIMIT):
 
 def test_limit(game=game1, limit=LIMIT):
     num_guesses = game(limit=limit)
-    print(f'It took {num_guesses} guesses with limit {limit}. The ratio is {num_guesses/float(limit)}')
+    print(f'It took {num_guesses} guesses with limit {limit}, the ratio is {num_guesses/float(limit)}')
 
 test_limit(game=game2, limit=10**9)
