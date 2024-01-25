@@ -2,13 +2,23 @@
 
 The game is played between two players.
 
-Before the game starts, the first player chooses a random number which he keeps a secret. The `secret_number` stays constant throughout the game.
+### Before the game starts, the first player chooses a random number which they keeps a secret. The `secret_number` stays constant throughout the game.
 
-On the start of each turn the first player generates a new temporary random number. He adds the `temporary_number` to his `secret_number` and tells the second player the result as a `hint`.
+`secret_number = get_random_number()`
 
-After hearing the `hint`, the second player tries to guess the first players's `secret_number` and the turn ends.
+### On the start of each turn the first player generates a new temporary random number.
 
-The game ends once the second player guesses the `secret_number` correctly. 
+`temporary_number = get_random_number()`
+
+### They add the `temporary_number` to his `secret_number` and tells the second player the result as a `hint`.
+
+`hint = secret_number + temporary_number`
+
+### After hearing the `hint`, the second player tries to guess the first players's `secret_number` and the turn ends.
+
+`guess = ???`
+
+### The game ends once the second player guesses the `secret_number` correctly. 
 
 All numbers are assumed to be in the range of `-limit` to `limit`, where `limit` can be infinite.
 
