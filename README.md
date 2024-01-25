@@ -2,7 +2,7 @@
 
 The game is played between two players.
 
-### Before the game starts, the first player chooses a random number which they keeps a secret. The `secret_number` stays constant throughout the game.
+### Before the game starts, the first player chooses a random number which they keep a secret. The `secret_number` stays constant throughout the game.
 
 `secret_number = get_random_number()`
 
@@ -10,7 +10,7 @@ The game is played between two players.
 
 `temporary_number = get_random_number()`
 
-### They add the `temporary_number` to his `secret_number` and tells the second player the result as a `hint`.
+### They add the `temporary_number` to their `secret_number` and tell the second player the result as a `hint`.
 
 `hint = secret_number + temporary_number`
 
