@@ -6,6 +6,8 @@ The game is played between two players.
 
 `secret_number = get_random_number()`
 
+## Each turn:
+
 ### On the start of each turn the first player generates a new temporary random number.
 
 `temporary_number = get_random_number()`
@@ -16,7 +18,7 @@ The game is played between two players.
 
 ### After hearing the `hint`, the second player tries to guess the first players's `secret_number` and the turn ends.
 
-`guess = ???`
+`guess = int(input("Enter guess: "), 0)`
 
 ### The game ends once the second player guesses the `secret_number` correctly. 
 
