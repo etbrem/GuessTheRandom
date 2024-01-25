@@ -18,7 +18,7 @@ Guess The Random (GTR from now on) is a single player game where you can enjoy h
 
 ### After getting the `hint`, the player tries to guess the computer's `secret_number` and the turn ends.
 
-`guess = int(input("Enter guess: "))`
+`guess = int(input(f"Hint: {hint}\nEnter guess: ")))`
 
 ### The game ends and the player wins once they guess the `secret_number` correctly. 
 
@@ -38,8 +38,7 @@ while True:
   temporary_number = get_random_number()
   hint = secret_number + temporary_number
 
-  print(f'Hint: {hint}')
-  guess = int(input("Enter guess: "))
+  guess = int(input(f"Hint: {hint}\nEnter guess: "))
 
   if guess == secret_number:
     print(f"Congrats! You guessed the secret number in only {time.time() - start_time} seconds!")
