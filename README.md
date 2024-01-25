@@ -42,7 +42,7 @@ while True:
   guess = int(input("Enter guess: "))
 
   if guess == secret_number:
-    print("Congrats! You guessed the secret number {secret_number} in only {} seconds!")
+    print("Congrats! You guessed the secret number in only {} seconds!")
     break
 ```
 
