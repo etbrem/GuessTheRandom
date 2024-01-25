@@ -1,30 +1,49 @@
 # Guess The Random
 
-The game is played between two players.
+Guess The Random (GTR from now on) is a single player game where you can enjoy hours of gameplay against the computer.
 
-### Before the game starts, the first player chooses a random number which they keep a secret. The `secret_number` stays constant throughout the game.
+## At the start of each game the computer chooses a random number which it keeps a secret. The `secret_number` stays constant throughout the game.
 
 `secret_number = get_random_number()`
 
 ## Each turn:
 
-### On the start of each turn the first player generates a new temporary random number.
+### On the start of each turn the computer generates a new temporary random number.
 
 `temporary_number = get_random_number()`
 
-### They add the `temporary_number` to their `secret_number` and tell the second player the result as a `hint`.
+### It adds the `temporary_number` to the `secret_number` and gives the player the result as a `hint`.
 
 `hint = secret_number + temporary_number`
 
-### After hearing the `hint`, the second player tries to guess the first players's `secret_number` and the turn ends.
+### After getting the `hint`, the player tries to guess the computer's `secret_number` and the turn ends.
 
-`guess = int(input("Enter guess: "), 0)`
+`guess = int(input("Enter guess: "))`
 
-### The game ends once the second player guesses the `secret_number` correctly. 
+### The game ends and the player wins once they guess the `secret_number` correctly. 
 
 All numbers are assumed to be in the range of `-limit` to `limit`, where `limit` can be infinite.
 
+```python
+import time
+import random
 
-[A strategy for the second player](SOLUTION.md)
+LIMIT = 10**9
+get_random_number = lambda: random.randint(-LIMIT, LIMIT)
 
-[Code which simulates the game and (usually) ends with the second player correctly guessing the `secret number`](guess_the_random.py)
+start_time = time.time()
+secret_number = get_random_number()
+
+while True:
+  temporary_number = get_random_number()
+  hint = secret_number + temporary_number
+  print(f'Hint: {hint}')
+  guess = int(input("Enter guess: "))
+  if guess == secret_number:
+    print("Congrats! You guessed the secret number {secret_number} in only {} seconds!")
+    break
+```
+
+[A strategy to win](SOLUTION.md)
+
+[POC for correctly guessing the `secret number`](guess_the_random.py)
