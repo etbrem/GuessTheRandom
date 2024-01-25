@@ -29,7 +29,7 @@ import time
 import random
 
 LIMIT = 10**9
-get_random_number = lambda: random.randint(-LIMIT, LIMIT)
+get_random_number = lambda limit=LIMIT: random.randint(-limit, limit)
 
 start_time = time.time()
 secret_number = get_random_number()
