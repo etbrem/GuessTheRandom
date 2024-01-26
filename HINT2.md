@@ -1,5 +1,5 @@
-In order to win, the range of the `limit` is somewhat important.
+In order to win, the value of the `limit` is somewhat important.
 
-You must either know the range of `limit`  
+You must either know the value of `limit`  
 or  
-The range of `limit` is from `-limit` to `limit`  
+The range of `temporary_number` is from `-limit` to `limit`  
