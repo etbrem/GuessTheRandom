@@ -19,6 +19,12 @@ The probability that a `hint` will be above is equal to the probability it will 
 The more mathematical explanation is that according to [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers) the more turns the game takes,  
 the closer the average of the `hints` will get to the [*expected value*](https://en.wikipedia.org/wiki/Expected_value) of a `hint`.
 
+The *expected value* of a random variable is 
+
+$` E(X) = sum_{i=0}^{N} ( x_i * p(x_i) ) `$  
+
+where $x_i$ is each of the possible values the variable can take  
+and $p(x_i)$ is the probability of $x_i$ occuring.
 
 
 The *expected value* is linear in addition so  
