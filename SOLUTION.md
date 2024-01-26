@@ -1,8 +1,8 @@
 ### The player can win (?)
 
-It may seem counterintuitive, but the player can end the game and win.
+It may seem counterintuitive, but the player can win and end the game.
 
-All they need to do is use the average of all of the `hints` they've heard so far as their `guess`. 
+All they need to do is use the average of all of the `hints` they've gotten so far as their `guess`. 
 
 
 ### Guessing with the average is all you need (?)
