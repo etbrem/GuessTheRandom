@@ -53,6 +53,10 @@ while True:
     break
 ```
 
+Hints: [1](HINT1.md) [2](HINT2.md)
+
 [A strategy to win](SOLUTION.md)
 
 [POC for correctly guessing the `secret number`](guess_the_random.py)
+
+[Notes](NOTES.md)
