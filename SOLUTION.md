@@ -23,7 +23,7 @@ The *expected value* of a random variable $X$ is
 
 $` E(X) = sum_{i=0}^{N} ( x_i * p(x_i) ) `$  
 
-where $x_i$ is each of the possible values the variable can take  
+where $x_i$ is each of the possible values the variable $X$ can take  
 and $p(x_i)$ is the probability of $x_i$ occuring.
 
 
