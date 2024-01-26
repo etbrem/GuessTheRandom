@@ -16,7 +16,7 @@ The probability that a `hint` will be above is equal to the probability it will 
 
 ## This is mathematically legit (?)
 
-The more mathematical explanation is that according to [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers) the more turns the game takes,  
+The more mathematical explanation is that according to [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers#Weak_law) the more turns the game takes,  
 the closer the average of the `hints` will get to the [*expected value*](https://en.wikipedia.org/wiki/Expected_value) of a `hint`.
 
 The *expected value* of a random variable $X$ is 
