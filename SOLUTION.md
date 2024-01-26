@@ -32,7 +32,7 @@ The calculation for the *expected value* is [linear](https://en.wikipedia.org/wi
 $` E(hint) = E(secret\_number + temporary\_number) = E(secret\_number) + E(temporary\_number) `$  
 
 
-The `secret_number` is constant so it's *expected value* is `secret_number`  
+The `secret_number` is constant throughout the game so its *expected value* is `secret_number`  
 
 $` E(secret\_number) = secret\_number `$
 
