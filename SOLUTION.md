@@ -36,7 +36,7 @@ The `secret_number` is constant so it's *expected value* is `secret_number`
 
 $` E(secret\_number) = secret\_number `$
 
-The *expected value* of a `temporary_number` (a random variable) is calculated as  
+The *expected value* of a `temporary_number` (a random variable in the range `-limit` to `limit`) is calculated as  
 
 $` E(temporary\_number) = sum_{j=0}^{2*limit} (v_j * p_j) = sum_{i=-limit}^{limit} (v_i * p_i) `$  
 
