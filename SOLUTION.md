@@ -27,7 +27,8 @@ where $x_i$ is each of the possible values the variable $X$ can take
 and $p(x_i)$ is the probability of $x_i$ occuring.
 
 
-The calculation for the *expected value* is [linear](https://en.wikipedia.org/wiki/Linear_map#Definition_and_first_consequences) so  
+The calculation for the *expected value* is the sum of all the weighted possibilities
+and is [linear](https://en.wikipedia.org/wiki/Linear_map#Definition_and_first_consequences) so  
 
 $` E(hint) = E(secret\_number + temporary\_number) = E(secret\_number) + E(temporary\_number) `$  
 
