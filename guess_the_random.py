@@ -16,6 +16,8 @@ def generate_hints(secret_number, limit=LIMIT):
         yield hint
 
 def iter_means(values):
+    ''' Calculate and yield the mean as each value is added to the calculation '''
+    
     curr_mean = 0.0
 
     for i, value in enumerate(values):
