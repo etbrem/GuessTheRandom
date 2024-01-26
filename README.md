@@ -1,6 +1,6 @@
 # Guess The Random
 
-Guess The Random (GTR from now on) is a single player game where you can enjoy hours of gameplay against the computer.
+Guess The Random (GTR from now on) is a fun single player game where you can enjoy hours of gameplay against the computer.
 
 ## At the start of each game the computer chooses a random number which it keeps a secret. The `secret_number` stays constant throughout the game.
 
