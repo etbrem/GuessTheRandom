@@ -2,33 +2,33 @@
 
 Guess The Random (GTR from now on) is a fun single player game where you can enjoy hours of gameplay against the computer.
 
-## At the start of each game the computer chooses a random number which it keeps a secret. The `secret_number` stays constant throughout the game.
+### At the start of each game the computer chooses a random number which it keeps a secret. The `secret_number` stays constant throughout the game.
 
 ```python
 secret_number = get_random_number()
 ````
 
-## Each turn:
+### Each turn:
 
-### On the start of each turn the computer generates a new temporary random number.
+#### On the start of each turn the computer generates a new temporary random number.
 
 ```python
 temporary_number = get_random_number()
 ```
 
-### It adds the `temporary_number` to the `secret_number` and gives the player the result as a `hint`.
+#### It adds the `temporary_number` to the `secret_number` and gives the player the result as a `hint`.
 
 ```python
 hint = secret_number + temporary_number
 ```
 
-### After getting the `hint`, the player tries to guess the computer's `secret_number` and the turn ends.
+#### After getting the `hint`, the player tries to guess the computer's `secret_number` and the turn ends.
 
 ```python
 guess = int(input(f"Hint: {hint}\nEnter guess: "))
 ```
 
-### The game ends and the player wins once they guess the `secret_number` correctly. 
+#### The game ends and the player wins once they guess the `secret_number` correctly. 
 
 All numbers are assumed to be in the range of `-limit` to `limit`, where `limit` can be infinite.
 
