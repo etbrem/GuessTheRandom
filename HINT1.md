@@ -1,1 +1,1 @@
-The range of the `limit` is not trivial
+How random is the `secret_number` throughout the game?
