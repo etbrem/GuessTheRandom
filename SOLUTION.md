@@ -38,7 +38,7 @@ $` E(secret\_number) = secret\_number `$
 
 The *expected value* of a `temporary_number` (a random variable in the range `-limit` to `limit`) is calculated as  
 
-$` E(temporary\_number) = sum_{j=0}^{2*limit} (v_j * p_j) = sum_{i=-limit}^{limit} (v_i * p_i) `$  
+$` E(temporary\_number) = sum_{i=0}^{2*limit+1} (v_i * p_i) `$ 
 
 where $v_i$ is each of the possible values the `temporary_number` can take  
 and $p_i$ is the probability that $v_i$ occurs. 
@@ -51,11 +51,11 @@ where dx is some constant.
 
 Since all probabilities are equal and constant  
 
-$` E(temporary\_number) = sum_{i=-limit}^{limit} (v_i * dx)  = dx * sum_{i=-limit}^{limit}v_i `$  
+$` E(temporary\_number) = sum_{i=0}^{N} (v_i * dx)  = dx * sum_{i=0}^{N} v_i `$  
 
 But since $v_i$ takes on all the values from `-limit` to `limit`  ( $` v_i = i `$ )  
 
-$` E(temporary\_number) = dx * sum_{i=-limit}^{limit}i = dx * (-limit + -(limit-1) + -(limit-2) + ... + 0 + ... + (limit-2) + (limit-1) + limit ) = 0`$  
+$` E(temporary\_number) = dx * sum_{i=0}^{N} i = dx * (-limit + -(limit-1) + -(limit-2) + ... + 0 + ... + (limit-2) + (limit-1) + limit ) = 0`$  
 
 Finally we see that the *expectation value* of a `hint` is  
 
