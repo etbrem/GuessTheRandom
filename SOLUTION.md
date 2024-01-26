@@ -21,7 +21,7 @@ the closer the average of the `hints` will get to the [*expected value*](https:/
 
 The *expected value* of a random variable $X$ is 
 
-$` E(X) = sum_{i=0}^{N} ( x_i * p(x_i) ) `$  
+$` E(X) = sum_{i=0}^{2*limit+1} ( x_i * p(x_i) ) `$  
 
 where $x_i$ is each of the possible values the variable $X$ can take  
 and $p(x_i)$ is the probability of $x_i$ occuring.
