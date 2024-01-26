@@ -19,26 +19,43 @@ The probability that a `hint` will be above is equal to the probability it will 
 The more mathematical explanation is that according to [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers) the more turns the game takes,  
 the closer the average of the `hints` will get to the [*expected value*](https://en.wikipedia.org/wiki/Expected_value) of a `hint`.
 
-The *expected value* of a hint is calculated as  
-$` E(hint) = E(v_0, v_1, v_2, ... v_n, p_0, p_1, p_2, ... p_n)  =  ( sum_{i=0}^{n} p_i * v_i ) / n `$
-
-where $v_i$ are each of the possible values the hint can take  
-and $p_i$ the probability that $v_i$ will occur.
-
-Since the probability $p_i$ for each value $v_i$ is equal to any other value $v_j$ (disregarding the limit problem), we can replace $p_i$ with some constant dx giving  
-$` E(hint) = ( sum_{i=0}^{n} v_i * dx ) / n =  dx * ( sum_{i=0}^{n} v_i ) / n `$  
-
-Since $v_i$ is the sum of the `secret_number` s and some `temporary_number` t we can replace $v_i$ giving  
-$` E(hint) = dx * ( sum_{i=0}^{n} (s+t_i) ) / n `$  
-
-We can seperate the sum into two sums giving  
-$` E(hint) = dx * (  sum_{i=0}^{n} s + sum_{i=0}^{n} t_i  ) / n = dx * sum_{i=0}^{n} s / n + dx * sum_{i=0}^{n} t_i / n `$  
-
-Since $t_i$ takes on all values from `-limit` until `limit` the second sum equals 0  
-$` E(hint) = dx * sum_{i=0}^{n} s / n + dx * 0 / n = dx * sum_{i=0}^{n} s / n = dx * s `$  
 
 
+The *expected value* is linear in addition so  
 
+$` E(hint) = E(secret\_number + temporary\_number) = E(secret\_number) + E(temporary\_number) `$  
+
+
+The `secret_number` is constant so it's *expected value* is `secret_number`  
+
+$` E(secret\_number) = secret\_number `$
+
+The *expected value* of a `temporary_number` (a random variable) is calculated as  
+
+$` E(temporary\_number) = sum_{i=-limit}^{limit} (v_i * p_i) `$  
+
+where $v_i$ is each of the possible values the `temporary_number` can take  
+and $p_i$ is the probability that $v_i$ occurs. 
+
+Since the probability $p_i$ of any $v_i$ occuring is equal to the probability $p_j$ of any $v_j$ occuring  
+
+$` p_i = p_j = dx `$  
+
+where dx is some constant.  
+
+Since all probabilities are equal and constant  
+
+$` E(temporary\_number) = sum_{i=-limit}^{limit} (v_i * dx)  = dx * sum_{i=-limit}^{limit}v_i `$  
+
+But since $v_i$ takes on all the values from `-limit` to `limit`  ( $` v_i = i `$ )  
+
+$` E(temporary\_number) = dx * sum_{i=-limit}^{limit}i = dx * (-limit + -(limit-1) + -(limit-2) ... + (limit-2) + (limit-1) + limit ) = 0`$  
+
+Finally we see that the *expectation value* of a `hint` is  
+
+$` E(hint) = E(secret\_number) + E(temporary\_number) = secret\_number + 0 = secret\_number`$
+
+So according to the Law of large numbers the average of all the hints will approach the `secret_number` the more turns the game takes.
 
 ### The limit problem
 
