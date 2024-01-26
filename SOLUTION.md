@@ -1,11 +1,11 @@
-### The player can win (?)
+## The player can win (?)
 
 It may seem counterintuitive, but the player can win and end the game.
 
 All they need to do is use the average of all of the `hints` they've gotten so far as their `guess`. 
 
 
-### Guessing with the average is all you need (?)
+## Guessing with the average is all you need (?)
 
 The simplest way to explain why it's a good idea to use the average of all the `hints` as the `guess` is  
 that sometimes the `hint` will be above the `secret_number` and sometimes it will be below.
@@ -14,7 +14,7 @@ The probability that a `hint` will be above is equal to the probability it will 
 
 
 
-### This is mathematically legit (?)
+## This is mathematically legit (?)
 
 The more mathematical explanation is that according to [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers) the more turns the game takes,  
 the closer the average of the `hints` will get to the [*expected value*](https://en.wikipedia.org/wiki/Expected_value) of a `hint`.
