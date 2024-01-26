@@ -58,7 +58,7 @@ But since $v_i$ takes on all the values from `-limit` to `limit`
 
 $` E(temporary\_number) = dx * sum_{i=0}^{2*limit+1} v_i = dx * (-limit + -(limit-1) + -(limit-2) + ... + 0 + ... + (limit-2) + (limit-1) + limit ) = 0`$  
 
-Finally we see that the *expectation value* of a `hint` is  
+Finally we see that the *expected value* of a `hint` is  
 
 $` E(hint) = E(secret\_number) + E(temporary\_number) = secret\_number + 0 = secret\_number`$
 
