@@ -10,7 +10,7 @@ All they need to do is use the average of all of the `hints` they've gotten so f
 The simplest way to explain why it's a good idea to use the average of all the `hints` as the `guess` is  
 that sometimes the `hint` will be above the `secret_number` and sometimes it will be below.
 
-The probability that a `hint` will be above is equal to the probability it will be below (disregarding the limit problem), so loosely speaking it cancels out.
+The probability that a `hint` will be above is equal to the probability it will be below, so loosely speaking it cancels out.
 
 
 
@@ -63,6 +63,3 @@ $` E(hint) = E(secret\_number) + E(temporary\_number) = secret\_number + 0 = sec
 
 So according to the Law of large numbers the average of all the hints will approach the `secret_number` the more turns the game takes.
 
-### The limit problem
-
-The closer the `secret_number` gets to the `limit`, the less numbers there are above it
