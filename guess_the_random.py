@@ -54,7 +54,7 @@ def game2(limit=LIMIT):
         rands_sum += temporary_number
 
         if i % 10000 == 0 or int(curr_mean) == secret_number:
-            print(f'Turn {i} mean {curr_mean} rands_mean/L {rands_mean/L} rands_sum/L {rands_sum/L:.2f}')
+            print(f'Turn {i} mean {curr_mean} rands_mean/L {rands_mean/L} rands_sum/L {rands_sum/L}')
         # print(f'Turn {i} random {temporary_number} hint {hint} mean {curr_mean} secret {secret_number} rands_mean/L {rands_mean/L} rands_sum/L {rands_sum/L}')
 
         if int(curr_mean) == secret_number:
