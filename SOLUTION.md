@@ -56,7 +56,10 @@ $` E(temporary\_number) = sum_{i=0}^{2*limit+1} (v_i * dx)  = dx * sum_{i=0}^{2*
 
 But since $v_i$ takes on all the values from `-limit` to `limit`  
 
-$` E(temporary\_number) = dx * sum_{i=0}^{2*limit+1} v_i = dx * (-limit + -(limit-1) + -(limit-2) + ... + 0 + ... + (limit-2) + (limit-1) + limit ) = 0`$  
+$` E(temporary\_number) = `$  
+$` = dx * sum_{i=0}^{2*limit+1} v_i =`$  
+$` = dx * (-limit + -(limit-1) + -(limit-2) + ... + 0 + ... + (limit-2) + (limit-1) + limit ) =`$  
+$` = 0`$  
 
 Finally we see that the *expected value* of a `hint` is  
 
